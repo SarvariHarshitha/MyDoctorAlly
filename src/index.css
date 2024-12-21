@@ -2,50 +2,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Playwrite+CO+Guides&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DynaPuff:wght@400..700&family=Playwrite+CO+Guides&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=DynaPuff:wght@400..700&family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+CO+Guides&display=swap');
-*{
-  margin : 0;
+* {
+  margin: 0;
   padding: 0;
 }
 
-body{
+body {
   box-sizing: border-box;
 }
 
-.navbar{
+/* Navbar */
+.navbar {
   height: 15vh;
-  display : flex;
+  display: flex;
   justify-content: left;
   align-items: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h1{
+.navbar h1 {
   font-family: "Atma", system-ui;
   margin-left: 4.25rem;
   color: #4A628A;
 }
 
-.about-section{
+/* About Section */
+.about-section {
   margin: 7vh 8vw 7vh 8vw;
   display: flex;
   justify-content: space-evenly;
   height: 60vh;
 }
-.about-section h2{
-  color : #7AB2D3;
-}
-.about-section img{
-  width: 35vw;
-  height : 50vh;
+
+.about-section h2 {
+  color: #7AB2D3;
 }
 
-.about-text{
+.about-section img {
+  width: 35vw;
+  height: 50vh;
+}
+
+.about-text {
   width: 35vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+/* Section buttons */
 .section {
   display: flex;
   justify-content: center;
@@ -62,16 +67,16 @@ body{
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
   border: 1px solid #4A628A;
 }
 
 .section .nav-button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
 
 .section .nav-button.active {
-  background-color: #4A628A; 
+  background-color: #4A628A;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -79,29 +84,30 @@ body{
   transform: scale(0.98);
 }
 
+/* Microphone Section */
 .microphone {
-  border-top-left-radius: 10px;  
-  border-bottom-left-radius: 10px; 
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .text {
-  border-top-right-radius: 10px;  
-  border-bottom-right-radius: 10px; 
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.mic{
-  padding:2rem;
+.mic {
+  padding: 2rem;
   border-radius: 100%;
   background-color: #4A628A;
   border: none;
 }
 
-.mic i{
+.mic i {
   font-size: 1.5rem;
   color: white;
 }
 
-.microphone-section{
+.microphone-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,11 +115,12 @@ body{
   margin: 7vh 8vw 7vh 8vw;
 }
 
-.mic:hover{
+.mic:hover {
   background-color: #7AB2D3;
 }
 
-.text-section{
+/* Text Section */
+.text-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,7 +128,8 @@ body{
   margin: 7vh 8vw 7vh 8vw;
 }
 
-.generate-report{
+/* Generate Report */
+.generate-report {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +137,7 @@ body{
   margin: 7vh 8vw 7vh 8vw;
 }
 
-.generate{
+.generate {
   padding: 1rem 1rem;
   border-radius: 10px;
   background-color: #4A628A;
@@ -137,10 +145,11 @@ body{
   font-family: "Karla", sans-serif;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
-.footer{
+/* Footer */
+.footer {
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -151,8 +160,8 @@ body{
 }
 
 .mic-active {
-  background-color: #f00; 
-  transform: scale(1.3); 
+  background-color: #f00;
+  transform: scale(1.3);
 }
 
 .generate-report input {
@@ -162,4 +171,101 @@ body{
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    margin: 5vh 2vw;
+  }
+
+  .about-section img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .about-text {
+    width: 80vw;
+    margin-top: 2rem;
+  }
+
+  .section .nav-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .microphone-section, .text-section, .generate-report {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mic {
+    padding: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    height: 8vh;
+    font-size: 0.9rem;
+  }
+
+  .generate {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    height: auto;
+    margin: 4vh 2vw;
+  }
+
+  .about-section img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .about-text {
+    width: 90vw;
+    margin-top: 1rem;
+  }
+
+  .section .nav-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .microphone-section, .text-section, .generate-report {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mic {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .footer {
+    height: 7vh;
+    font-size: 0.8rem;
+  }
+
+  .generate {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
 }
