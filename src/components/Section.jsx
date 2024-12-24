@@ -9,7 +9,7 @@ const Section = () => {
     const [name, setName] = useState('');
 
     const handleSubmit = () => {
-        fetch('https://mydoctorally-backend.onrender.com', {
+        fetch('https://mydoctorally-backend-s4me.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
